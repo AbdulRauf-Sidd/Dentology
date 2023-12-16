@@ -1,0 +1,37 @@
+<!-- templates/your_app/display_data.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Display</title>
+</head>
+<body>
+    <h2>Data Table</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>first name</th>
+                <th>last name</th>
+                <th>gender</th>
+                <th>group</th>
+                <th>View</th>
+                <!-- Add other column headers if needed -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in data %}
+            <tr>
+                <td>{{ item.first_name }}</td>
+                <td>{{ item.last_name }}</td>
+                <td>{{ item.gender }}</td>
+                <td>{{ item.group }}</td>
+                <td><a href="http://127.0.0.1:8000/search/{{ item.id }}">Details</a></td>
+                <!-- Add other columns based on your model fields -->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
