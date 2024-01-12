@@ -1,17 +1,63 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dentology</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
+
 <body>
-    <form action="" method="post">
-        {% csrf_token %}
-        <input type="email" name="email">email
-        <input type="password" name="password">pass
-        <button type="submit" value="login">login</button>
-        {{ message }}
-    </form>
+    <div class="container">
+        <div class="logo">
+            <img id="image" src="{% static 'webImages/logo_f.png' %}" width="50px" height="50px" alt="logo">
+            <h3>DENTOLOGY</h3>
+        </div>
+        <div class="back">
+            <div class="login_box">
+                <div class="heading">
+                    <h1>LOGIN FORM</h1>
+                </div>
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="input_box">
+                        <label for="Username">Username</label><br>
+                        <input id="username" class="input_1" type="username" placeholder="username" name="email" required><br>
+                        <label for="Password">Password</label><br>
+                        <input id="userPassword" class="input_1" id="input_2" type="password" name="password" placeholder="Password" required><br>
+                        <div>
+                        <label> <p class="ch1" >{{ message }}</p> </label><br>
+                        <button class="btn" type="submit"><a id="login-btn" href="#" >Log in</a></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS FOR LOGIN PAGE -->
+    <script>
+        function login(){
+            var x = document.getElementById("username").value
+            var y = document.getElementById("userPassword").value
+            if (x == "admin" && y=="sana"){
+                window.location="home.html"
+            }
+            else if(x!="admin" && y == "sana"){
+                alert("Incorrect username")
+            }
+            else if (x=="admin" && y != "sana"){
+                alert("Incorrect password")
+            }
+            else{
+                alert("Username & Password are incorrect");
+                document.getElementById("username").value = "";
+                document.getElementById("userPassword").value = "";
+            }
+        }
+    </script>
 </body>
+
 </html>

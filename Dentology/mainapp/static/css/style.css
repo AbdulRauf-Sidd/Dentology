@@ -1,0 +1,408 @@
+
+*{
+    font-family: sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+.container{
+    margin-top: 0;
+
+}
+.logo{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin: 5px;
+    margin-left: 60px;
+    padding: 5px;
+}
+#image{
+    display: inline-block;
+
+}
+h3{
+    color: #03045e;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+.back{
+    background: url(/static/css/images/bg2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment:scroll;
+    background-position: center;
+    width: 100%;
+    height: 78vh;
+}
+.login_box{
+    position: relative;
+    top: 12%;
+    width: 320px;
+    padding: 20px;
+    font-size: 3vh;
+    margin-left: 10%;
+    height: 60vh;
+
+ /* --------------glassmorphism--------------------- */
+    background: linear-gradient(135deg,rgba(255, 255,255,0.1), rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1pc solid rgba(255, 255,255,0.18);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+}
+@media screen and (max-width: 400px){
+    .login_box{
+        position: relative;
+        top: 15%;
+        width: 70%;
+        padding: 20px;
+        font-size: 2vh;
+        margin-left: 17%;
+     /* --------------glassmorphism--------------------- */
+        background: linear-gradient(135deg,rgba(255, 255,255,0.1), rgba(255,255,255,0));
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 20px;
+        border: 1pc solid rgba(255, 255,255,0.18);
+        box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+    }
+}
+.heading{
+    font-size: 15px;
+    margin: 10px;
+    color: #03045e;
+    text-align: center;
+    margin-bottom: 20px;
+}
+label{
+    color:  rgba(46, 45, 45, 0.709);;
+}
+input{
+    width: 100%;
+    padding: 10px;
+    /* margin: 10px 0; */
+    margin-bottom: 13px;
+    background: transparent;
+    text-decoration: none;
+    border: 2px solid rgba(128, 128, 128, 0.534);
+}
+.checkbox{
+    display: inline-block;
+    width: 20px;
+}
+p{
+    font-size: small;
+    display: inline-block;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    width: 95%;
+    font-size: large;
+    border-radius: 7px;
+    background-color: #03045e;
+    height: 6vh;
+    margin: 0 10px;
+
+}
+#login-btn{
+    color: white;
+    text-decoration: none;
+
+}
+/* ------------------HOME PAGE-------------------- */
+.logout{
+    position: absolute;
+    right: 5%;
+    text-decoration: none;
+    width: 210px;
+    display: flex;
+
+}
+h4{
+    display: flex;
+    position: relative;
+    right: 5%;
+    text-decoration: none;
+}
+#a1{
+    text-decoration: none;
+    background-color: #03045e;
+    color: white;
+    font-size: 15px;
+    width: 50%;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 15px;
+
+}
+/* .btn2{
+
+    display: inline-block;
+    font-size: 15px;
+    text-decoration: none;
+    background: transparent;
+    width: 40%;
+    border-radius: 7px;
+} */
+a:hover{
+    color: rgb(0, 78, 146);
+}
+@media screen and (max-width: 500px){
+    h4{
+        color: transparent;
+    }
+}
+/* back ground image */
+.col2,.col1{
+    /* height: 78vh; */
+    width: 47%;
+    display: inline-block;
+}
+.col1{
+    width: 52%;
+}
+.back-2{
+    background: url(/static/css/images/home-img2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment:scroll;
+    background-position: center;
+    border-radius: 30px 0 0 30px ;
+    width: 100%;
+    height: 78vh;
+    position: relative;
+    left: 8.5px;
+}
+.row{
+    /* background-color: #d4b79e; */
+    background-color: rgba(156,220,233,1);
+    height: 78vh;
+}
+.col2{
+    /* border: 2px solid black; */
+    position: relative;
+    bottom: 50%;
+    left: 4%;
+}
+.wel-h1{
+    display: absolute;
+    top: 2px;
+    color: rgb(5, 41, 109);
+
+}
+.hed-2{
+    color: rgb(5, 41, 109);
+    margin-top: 30px;
+}
+
+.buttons{
+    position: absolute;
+    top: 130%;
+    display: inline-block;
+
+}
+.btn-home1{
+    display: flex;
+    width: 200px;
+    height: 7vh;
+    font-size: medium;
+    background-color: #03045e;
+    /* border: 2px solid black; */
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10%;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+}
+/* ------------------home page end-------------------------------- */
+/* add patients page */
+.record-head{
+    text-align: center;
+    margin: 10px 0;
+    text-decoration: overline;
+    color: #03045e;
+}
+.add-record{
+    /* width: 80%; */
+    margin-left: 10%;
+    position: relative;
+    top: 5%;
+    /* border: 2px solid black; */
+    display: inline-block;
+    height: 69vh;
+    color: black;
+    /* ------------ */
+    background: linear-gradient(135deg,rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.784));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1pc solid rgba(255, 255,255,0.18);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+}
+.inp{
+    border: 2px solid #000000;
+
+}
+.col-1{
+    color: #03045e;
+    /* border: 2px solid black; */
+    width: 30%;
+    position: relative;
+    left: 15%;
+}
+.opt{
+    width: 200px;
+    margin-bottom: 15px;
+}
+.l1{
+    /* margin-bottom: 10px; */
+    display: inline-block;
+    padding-bottom: 10px;
+    color: black;
+}
+.col-2{
+    /* border: 2px solid black; */
+    width: 30%;
+    position: absolute;
+    right: 15%;
+    bottom: 11%;
+
+}
+select{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    background-color: transparent;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    outline: none; /* Remove default focus outline */
+    cursor: pointer;
+}
+/* #med{
+    height: 13vh;
+    display: inline-block;
+    text-align: left;
+    justify-content: left;
+    align-items: start;
+
+} */
+.btn-rec{
+    position: relative;
+    bottom: 320px;
+    /* left: 170px; */
+    right: 270px;
+    width: 110px;
+    height: 5vh;
+}
+/* #med-history{
+} */
+textarea{
+    border: 2px solid #000000;
+    padding: 5px;
+    background: transparent;
+
+}
+.btn-home2{
+    right: 390px;
+}
+/* search page */
+.search_row{
+    /* background-color: rgba(156,220,233,1); */
+    background: linear-gradient(rgba(0, 8, 51, 0.647),rgba(0, 8, 51, 0.637)),url(/static/css/images/bg-search.avif);
+    height: 78vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 2px solid black;
+
+}
+.search{
+    background: linear-gradient(rgba(0, 0, 0, 0.486),rgba(0, 0, 0, 0.486));
+    width: 50%;
+    position: relative;
+    left: 25%;
+    top: 33vh;
+    height: 10vh;
+    border-radius: 30px;
+    padding-left: 20px;
+    color: white;
+}
+.search-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 24vh;
+    left: 22%;
+}
+
+.search-bar{
+    display: inline-block;
+    position: relative;
+    left: 8%;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    top: 5px;
+}
+.search-bar-input{
+    width: 90%;
+    /* border-radius: 15px; */
+}
+.search-bar-btn{
+    position: relative;
+    top: 5px;
+    right: 35px;
+}
+
+.logout-search-bar{
+    display: inline-block;
+    position: relative;
+    left: 85%;
+    bottom: 55px;
+}
+.lsb-btn{
+    position: relative;
+    bottom: 20px;
+    left: 90px;
+}
+#lsb-head{
+    text-decoration: none;
+}
+h4{
+    text-decoration: none !important;
+}
+
+
+
+/* -----------------------------------------------------------------*/
+/* .searchbar{
+    border: 2px solid black;
+    position: absolute;
+    right: 30px;
+    width: 20%;
+    display: inline-block;
+    height:10%;
+}
+.headingSearch{
+    display: flex;
+    align-items: center;
+ 
+}
+.input_search{
+    display: inline-block;
+} */

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+</head>
+<body>
+    <h2>Upload File</h2>
+
+    <form id="fileUploadForm" enctype="multipart/form-data" action="" method="post">
+        {% csrf_token %}
+        
+        <input type="text" name="history">
+        <br>
+        <input type="text" name="scheduled">
+        <br>
+        <label for="file">Choose File:</label>
+        <input type="file" name="image" id="image">
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="uploadStatus"></div>
+</body>
+</html>

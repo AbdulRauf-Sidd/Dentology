@@ -10,5 +10,8 @@ urlpatterns = [
     path('test/', views.test, name='test'),
     path("search/<tid>", views.search, name='search'),
     path("patientlist/<tid>", views.patientlist, name="patientlist"),
+    path("edittooth/<pid>/", views.edittooth1, name="teethlist"),
+    path("edittooth/<pid>/<tid>", views.edittooth2, name="edittooth"),
+    path("test/", views.test, name="edittooth"),
     #re_path('r^search/(?P<id>\d+)/$', search.as_view(), name='search'),
 ]

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adult Dentology Page</title>
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Creates 4 columns */
+    grid-gap: 10px; /* Space between images */
+    padding: 10px;
+  }
+  .grid-item {
+    width: 100%; /* Makes the image fully responsive within the grid item */
+    padding: 10px; /* Optional padding around images */
+  }
+  img {
+    max-width: 100%;
+    height: auto; /* Makes the image responsive */
+    display: block; /* Removes bottom space under the image */
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 2px solid black;
+  }
+  .header-left, .header-right {
+    flex: 1;
+  }
+  .header-center {
+    flex: 2;
+    text-align: center;
+    font-size: 24px;
+  }
+  .logo {
+    width: 50px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+    border-radius: 50%; /* Makes the logo round */
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo img {
+    width: 80%;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-left">
+    <div class="logo">
+      <!-- Insert your logo image file path in the src attribute -->
+      <img src="path_to_logo.png" alt="Logo">
+    </div>
+  </div>
+  <div class="header-center">
+    Dentology
+  </div>
+  <div class="header-right">
+    <button onclick="location.href='logout.html'">Logout</button>
+  </div>
+</div>
+
+<div class="grid-container">
+  <!-- Repeat this block 32 times for 32 images, changing the href and img src as necessary -->
+  <div class="grid-item">
+    <a href="link_to_other_page.html">
+      <img src="path_to_image.jpg" alt="Dental Image 1">
+    </a>
+  </div>
+  <!-- ... other grid items ... -->
+</div>
+
+</body>
+</html>

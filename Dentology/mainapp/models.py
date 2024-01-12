@@ -51,7 +51,7 @@ class Tooth(models.Model):
     history = models.TextField(max_length=None, null=True, blank=True);
     scheduled = models.TextField(max_length=None, null=True, blank=True);
     note = models.CharField(max_length=255, null=True, blank=True);
-    image = models.CharField(max_length=100);
+    image = models.ImageField(upload_to = "uploads/");
 
     class Meta:
         unique_together = ('patient_id', 'tooth_number');

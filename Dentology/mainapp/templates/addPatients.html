@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img id="image" src="{% static 'webImages/logo_f.png' %}" width="50px" height="50px" alt="logo">
+            <a href="http://127.0.0.1:8000/home/"><h3>DENTOLOGY</h3></a>
+            <div class="logout">
+                <h4>dummy text</h4>
+                <a id="a1" href="http://127.0.0.1:8000/login/">LOG OUT</a>
+            </div>
+        </div>
+        
+        <div class="row">
+            <form action="" method="post">
+                <div class="add-record">
+                    <h2 class="record-head" >Add new record</h2>
+                    <form class="col-1">
+                        <label class="l1" for="name">Name</label >
+                        <input placeholder="Patient Name" class="inp" type="text" name="name" required>
+                        <label class="l1" for="email">Email</label >
+                        <input placeholder="Patient Email" class="inp" type="email" name="email">
+                        <label class="l1" for="phone no">Phone no</label>
+                        <input placeholder="Patient Phone no" class="inp" type="tel" name="phone" required>
+                        <label class="l1" for="age">Age</label>
+                        <input placeholder="Patient Age" class="inp" type="number" required>
+                    
+                </form>
+                <form class="col-2">
+                    <label class="l1" for="gender">Select Gender:</label>
+                    <select class="inp" id="gender" name="gender" required>
+                        <option class="opt" value="male">Male</option>
+                        <option class="opt" value="female">Female</option>
+                        <option class="opt" value="other">Other</option>
+                    </select>     
+                    <label class="l1" for="group">Group</label>
+                    <select class="inp" name="group" id="" required>
+                        <option value="">child</option>
+                        <option value="">adult</option>
+                    </select>
+                    <!-- <div class="box">
+                        <label class="l1" for="medical-history">Medical History</label>
+                    <input placeholder="Patient Medical History" class="inp" id="med" type="text" required> -->
+                    <form id="med-history">
+                        <label class="l1" for="medical-history">Medical History</label>
+                        <textarea rows="4" cols="38"></textarea>
+                    </form>
+                    </div>
+                    <div class="buttons">
+                        <a  class="btn-home1 btn-rec">SAVE</a>
+                    </div>
+                    <div class="buttons">
+                        <a href="" id="cancel" class="btn-home1 btn-home2 btn-rec">CANCEL</a>
+                    </div>
+                    <!-- <button class="btn" type="submit"><a id="login-btn" href="#" >Log in</a></button>
+                    <button class="btn" type="submit"><a id="login-btn" href="#" >Log in</a></button> -->
+                </form>
+                
+                
+            </div>
+        </div>
+        
+    </div>
+    <script>
+        function cancel(){
+            document.getElementsByClassName("inp").value=""
+        }
+        function logout(){
+            var userResponse = window.confirm("do you really want to logout?");
+            if (userResponse){
+                window.location="index.html"
+            }
+            else
+            {
+                alert("to phir log out ka button dabaya hi kyun")
+            }
+        }
+    </script>
+</body>
+</html>
