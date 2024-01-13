@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Dentist, Patient
+from .models import Dentist, Patient, Tooth
 from django.db.models import Q
 from django.urls import reverse
 
@@ -33,8 +33,30 @@ def home(request):
         return redirect('http://127.0.0.1:8000/login/');
 
 def test(request):
-    request.session['id'] = False;
     return render(request, 'test.html', {});
+
+def addpatient(request):
+    if request.POST:
+        lname = ""
+        fname = ""
+        dent = Dentist.objects.get(id=request.session["id"]);
+        name = request.POST["name"].split();
+        if len(name) > 1:
+            fname = str(name[0]);
+            lname = "".join(name[1:]);
+        else:
+            fname = name;
+        gender = request.POST["gender"];
+        email = request.POST["email"];
+        group = request.POST["group"];
+        age = request.POST["age"];
+        phone = request.POST["phone"];
+        history = request.POST["history"];
+        obj = Patient(first_name=fname, last_name=lname, gender=gender, email=email, phone=phone, group=group, history=history, dentist=dent);
+        obj.save();
+        return redirect('http://127.0.0.1:8000/home/')
+    else:
+        return render(request, 'addPatients2.html', { 'ID' : request.session['id']})
 
 def search(request, tid):
     key = request.GET.get("search", "");
@@ -64,4 +86,17 @@ def edittooth1(request, pid):
 
 
 def edittooth2(request, pid, tid):
-    return render(request, "edittooth.html", {});
+    if request.POST:
+        obj = Patient.objects.get(id=pid);
+        new = Tooth.objects.get(patient_id = pid, tooth_number = tid);
+        new.patient_id = obj
+        new.tooth_number = tid;
+        new.history = request.POST["history"];
+        new.scheduled = request.POST["future"];
+        new.note = "";
+        if len(request.FILES) != 0:
+            new.image = request.FILES["image"];
+        new.save();
+        return render(request, 'tooth-detail.html', {});
+    else:
+        return render(request, "tooth-detail.html", {});

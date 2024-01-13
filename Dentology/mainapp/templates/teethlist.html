@@ -1,16 +1,213 @@
-<a href="1">1</a><br>
-<a href="/2">2</a><br>
-<a href="/3">3</a><br>
-<a href="/4">4</a><br>
-<a href="/5">5</a><br>
-<a href="/6">6</a><br>
-<a href="/7">7</a><br>
-<a href="/8">8</a><br>
-<a href="/9">9</a><br>
-<a href="/10">10</a><br>
-<a href="/11">11</a><br>
-<a href="/12">12</a><br>
-<a href="/13">13</a><br>
-<a href="/14">14</a><br>
-<a href="/15">15</a><br>
-<a href="/16">16</a><br>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Flower Gallery</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="hello">
+    <!-- <div class="body1"> -->
+    <div class="container">
+        <div class="logo">
+            <img id="image" src="{% static 'webImages/logo_f.png' %}" width="50px" height="50px" alt="logo">
+            <a href="http://127.0.0.1:8000/home/"><h3>DENTOLOGY</h3></a>
+            <div class="logout">
+                <h4>dummy text</h4>
+                <a onclick="logout()" id="a1" href="http://127.0.0.1:8000/login/">LOG OUT</a>
+            </div>
+
+        </div>
+
+<div class="row3">
+        <div class="all">
+<div class="gallery-container">
+    <!-- Enhanced Flower Gallery Items -->
+    <div class="gallery-item">
+        <a href="1"><img src="{% static 'webImages/1.png' %}" alt="Rose"></a>
+        <!-- <div class="caption">Rose</div> -->
+    </div>
+    <div class="gallery-item">
+        <a href="2"><img src="{% static 'webImages/2.png' %}" alt="Rose"></a>
+        <!-- <div class="caption">Lily</div> -->
+    </div>
+    <div class="gallery-item">
+        <a href="3"><img src="{% static 'webImages/3.png' %}" alt="Rose"></a>
+        <!-- <div class="caption">Sunflower</div> -->
+    </div>
+    <div class="gallery-item">
+        <a href="4"><img src="{% static 'webImages/4.png' %}" alt="Rose"></a>
+        <!-- <div class="caption">Tulip</div> -->
+    </div>
+    <div class="gallery-item">
+        <a href="5"><img src="{% static 'webImages/5.png' %}" alt="Rose"></a>
+        <!-- <div class="caption">Daisy</div> -->
+    </div>
+    <div class="gallery-item">
+        <a href="6"><img src="{% static 'webImages/6.png' %}" alt="Rose"></a>
+        <!-- <div class="caption">Orchid</div> -->
+    </div>
+</div>
+
+
+
+<div class="gallery-container">
+    <div class="gallery-item">
+        <a href="7"><img src="{% static 'webImages/7.png' %}" alt="Rose"></a>
+        <!-- <div class="caption">Rose</div> -->
+    </div>
+    <div class="gallery-item">
+        <a href="8"><img src="{% static 'webImages/8.png' %}" alt="Rose"></a>
+        <!-- <div class="caption">Lily</div> -->
+    </div>
+    <div class="gallery-item">
+        <a href="9"><img src="{% static 'webImages/9.png' %}" alt="Rose"></a>
+        <!-- <div class="caption">Sunflower</div> -->
+    </div>
+    <div class="gallery-item">
+        <a href="10"><img src="{% static 'webImages/10.png' %}" alt="Rose"></a>
+        <!-- <div class="caption">Tulip</div> -->
+    </div>
+    <div class="gallery-item">
+        <a href="11"><img src="{% static 'webImages/11.png' %}" alt="Rose"></a>
+        <!-- <div class="caption">Daisy</div> -->
+    </div>
+    <div class="gallery-item">
+        <a href="12"><img src="{% static 'webImages/12.png' %}" alt="Rose"></a>
+        <!-- <div class="caption">Orchid</div> -->
+    </div>
+</div>
+
+
+<div class="gallery-container">
+    <!-- Enhanced Flower Gallery Items -->
+    <div class="gallery-item">
+        <a href="13"><img src="{% static 'webImages/13.png' %}" alt="Rose"></a>
+        <!-- <div class="caption">Rose</div> -->
+    </div>
+    <div class="gallery-item">
+        <a href="14"><img src="{% static 'webImages/14.png' %}" alt="Rose"></a>
+        <!-- <div class="caption">Lily</div> -->
+    </div>
+    <div class="gallery-item">
+        <a href="15"><img src="{% static 'webImages/15.png' %}" alt="Rose"></a>
+        <!-- <div class="caption">Sunflower</div> -->
+    </div>
+    <div class="gallery-item">
+        <a href="16"><img src="{% static 'webImages/16.png' %}" alt="Rose"></a>
+        <!-- <div class="caption">Tulip</div> -->
+    </div>
+    <div class="gallery-item">
+        <a href="17"><img src="{% static 'webImages/17.png' %}" alt="Rose"></a>
+        <!-- <div class="caption">Daisy</div> -->
+    </div>
+    <div class="gallery-item">
+        <a href="18"><img src="{% static 'webImages/18.png' %}" alt="Rose"></a>
+        <!-- <div class="caption">Orchid</div> -->
+    </div>
+</div>
+
+
+
+
+<div class="gallery-container">
+    <div class="gallery-item">
+        <a href="19"><img src="{% static 'webImages/19.png' %}" alt="Rose"></a>
+        <!-- <div class="caption">Rose</div> -->
+    </div>
+    <div class="gallery-item">
+        <a href="20"><img src="{% static 'webImages/20.png' %}" alt="Rose"></a>
+        <!-- <div class="caption">Lily</div> -->
+    </div>
+    <div class="gallery-item">
+        <a href="21"><img src="{% static 'webImages/21.png' %}" alt="Rose"></a>
+        <!-- <div class="caption">Sunflower</div> -->
+    </div>
+    <div class="gallery-item">
+        <a href="22"><img src="{% static 'webImages/22.png' %}" alt="Rose"></a>
+        <!-- <div class="caption">Tulip</div> -->
+    </div>
+    <div class="gallery-item">
+        <a href="23"><img src="{% static 'webImages/23.png' %}" alt="Rose"></a>
+        <!-- <div class="caption">Daisy</div> -->
+    </div>
+    <div class="gallery-item">
+        <a href="24"><img src="{% static 'webImages/24.png' %}" alt="Rose"></a>
+        <!-- <div class="caption">Orchid</div> -->
+    <!-- </div> -->
+</div>
+
+
+
+<div class="gallery-container">
+    <!-- Enhanced Flower Gallery Items -->
+    <div class="gallery-item">
+        <a href="25"><img src="{% static 'webImages/25.png' %}" alt="Rose"></a>
+        <!-- <div class="caption">Rose</div> -->
+    </div>
+    <div class="gallery-item">
+        <a href="26"><img src="{% static 'webImages/26.png' %}" alt="Rose"></a>
+        <!-- <div class="caption">Lily</div> -->
+    </div>
+    <div class="gallery-item">
+        <a href="27"><img src="{% static 'webImages/27.png' %}" alt="Rose"></a>
+        <!-- <div class="caption">Sunflower</div> -->
+    </div>
+    <div class="gallery-item">
+        <a href="28"><img src="{% static 'webImages/28.png' %}" alt="Rose"></a>
+        <!-- <div class="caption">Tulip</div> -->
+    </div>
+    <div class="gallery-item">
+        <a href="29"><img src="{% static 'webImages/29.png' %}" alt="Rose"></a>
+        <!-- <div class="caption">Daisy</div> -->
+    </div>
+    <div class="gallery-item">
+        <a href="30"><img src="{% static 'webImages/30.png' %}" alt="Rose"></a>
+        <!-- <div class="caption">Orchid</div> -->
+    </div>
+</div>
+<div class="gallery-container">
+    <!-- Enhanced Flower Gallery Items -->
+    <div class="gallery-item">
+        <a href="31"><img src="{% static 'webImages/31.png' %}" alt="Rose"></a>
+        <!-- <div class="caption">Rose</div> -->
+    </div>
+    <div class="gallery-item">
+        <a href="32"><img src="{% static 'webImages/32.png' %}" alt="Rose"></a>
+        <!-- <div class="caption">Lily</div> -->
+    </div>
+</div>
+</div>
+</div>
+
+
+
+
+<!-- jQuery Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        // jQuery Event: Click on Gallery Item
+        $(".gallery-item").click(function(){
+            // jQuery Animation: Toggle visibility of caption
+            $(this).find(".caption").slideToggle();
+        });
+
+        // jQuery Event: Mouseenter on Gallery Item
+        $(".gallery-item").mouseenter(function(){
+            // jQuery Animation: Change background color on hover
+            $(this).css("background-color", "#ddd");
+        });
+
+        // jQuery Event: Mouseleave on Gallery Item
+        $(".gallery-item").mouseleave(function(){
+            // jQuery Animation: Reset background color on mouse leave
+            $(this).css("background-color", "");
+        });
+    });
+</script>
+
+</body>
+</html>
