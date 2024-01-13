@@ -5,7 +5,6 @@ from .views import search
 
 from django.conf import settings
 from django.conf.urls.static import static
-
 #urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
@@ -24,3 +23,5 @@ urlpatterns = [
     path("test/", views.test, name="edittooth"),
     #re_path('r^search/(?P<id>\d+)/$', search.as_view(), name='search'),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

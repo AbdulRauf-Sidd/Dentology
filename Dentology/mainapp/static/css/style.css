@@ -508,7 +508,96 @@ h4{
     text-decoration: none !important;
 }
 
+/* -----------------css done by sana ----------------- */
+.row-detail{
+    display: flex;
+    justify-content: space-between;
+}
+.box-container{
+    padding: 30px;
+    margin: 30px;
+    width:100%;
+    padding-top: 20px;
+    margin-top: 20px;
+    /* gap: 40px; */
+}
+.box1,.box2{
+    display: inline-block;
+}
+.box1{
+    /* border: 2px solid black; */
+    margin-top: 0;
+    padding-top: 0;
+    position: relative;
+    bottom: 50px; 
+    left: 20px;;
+    height: 65vh;
+    max-height: 65vh; /* Adjust as needed */
 
+}
+.box1, .history, .ta-tooth{
+    margin: 10px 0;
+}
+.box2{
+    margin-left: 10%;
+    text-align: center;
+    position: relative;
+    bottom: 50px;
+    padding: 0 40px;
+
+}
+.btns{
+    /* border: 2px solid blue; */
+    display: flex;
+}
+.tooth-btn1{
+    /* border: 2px solid blue; */
+    width: 100%;
+    
+} 
+.tooth-btn{
+    /* border: 2px solid blue; */
+    width: 20%;
+    height: 6vh;
+    background-color:#03045e;
+    color: white;
+    border-radius: 25px;
+    position: absolute;
+    border-color: transparent;
+}
+.cancel-btn{
+    right: 20px;
+
+}
+
+.save-btn{
+    right: 140px;
+}
+.image {
+    margin-top: 1rem;
+}
+
+input::file-selector-button {
+    color: white;
+    padding: 0.5em;
+    border: thin solid #03045e;
+    border-radius: 25px;
+    background-color: #03045e;
+    width: 100%;
+    height: 6vh;
+
+}
+#uploaded-image {
+    max-width: 100%;
+    max-height: 60%; /* Adjust as needed */
+    border: 2px solid black;
+}
+
+input[type="file"] {
+    max-width: 100%;
+    max-height: 65vh; /* Adjust as needed, matching box1 height */
+}
+/* ----------------------------------- */
 /* Caption Styles */
 /* .caption {
     position: absolute;

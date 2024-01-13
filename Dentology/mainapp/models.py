@@ -36,7 +36,7 @@ class Patient(models.Model):
     first_name = models.CharField(max_length=50);
     last_name = models.CharField(max_length=50);
     gender = models.CharField(max_length=10, choices=gender_choice);
-    email = models.EmailField(unique=True, null=True, blank=True);
+    email = models.EmailField(null=True, blank=True);
     phone = models.CharField(max_length=15, null=True, blank=True);
     group = models.CharField(max_length=10, choices=group_choice);
     history = models.TextField(max_length=None, null=True, blank=True);

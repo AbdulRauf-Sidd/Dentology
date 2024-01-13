@@ -14,7 +14,7 @@
             <img id="image" src="{% static 'webImages/logo_f.png' %}" width="50px" height="50px" alt="logo">
             <a href="http://127.0.0.1:8000/login/"><h3>DENTOLOGY</h3></a>
             <div class="logout">
-                <h4>{{ context.name }}</h4>
+                <h4>{{ name }}</h4>
                 <a onclick="logout()" id="a1" href="#">LOG OUT</a>
             </div>
         </div>
@@ -25,15 +25,15 @@
             <div class="box-container">
                 <div class="box1">
                     {% csrf_token %}
-                    <h3 style="text-align: center;">Tooth no: 04</h3>
+                    <h3 style="text-align: center;">Tooth no: {{ number }}</h3>
 
                     <div class="history">
                         <label for="HISTORY">HISTORY</label><br>
-                        <textarea class="ta-tooth" name="history" id="" cols="80" rows="7" placeholder="Patient history..."></textarea>
+                        <textarea class="ta-tooth" name="history" id="" cols="80" rows="7">{{ history }}</textarea>
                     </div>
                     <div class="plans">
                         <label for="plans" >PLANS</label><br>
-                        <textarea class="ta-tooth"  name="future" id="" cols="80" rows="7" placeholder="plans"></textarea>
+                        <textarea class="ta-tooth"  name="future" id="" cols="80" rows="7" placeholder="plans">{{ future }}</textarea>
                         <div class="btns">
                             <div class="tooth-btn1">
                                 <button class="tooth-btn" type="submit" href="#">Save</button></a>
@@ -50,7 +50,7 @@
                 </div> -->
                 <div class="gallery-container2">
                     <div class="gallery-item2">
-                        <a ><img id="t-detail" src="{{ context.img }}" alt="Rose"></a>
+                        <a ><img id="t-detail" src="{{ item.url }}" alt="Rose"></a>
                         <!-- <div class="caption">Rose</div> -->
                     </div>
                 </div>

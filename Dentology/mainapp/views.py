@@ -99,4 +99,6 @@ def edittooth2(request, pid, tid):
         new.save();
         return render(request, 'tooth-detail.html', {});
     else:
-        return render(request, "tooth-detail.html", {});
+        obj = Tooth.objects.get(patient_id = pid, tooth_number = tid);
+        context = {"name": request.session["id"], "item": obj.image, "number": obj.tooth_number, "history": obj.history, "future": obj.scheduled};
+        return render(request, "tooth-detail.html", context);
