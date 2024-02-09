@@ -12,9 +12,6 @@ def login(request):
             dent = Dentist.objects.get(email=email, password=password);
             request.session['id'] = dent.id;
             return redirect('http://127.0.0.1:8000/home/');
-            #return search(request, dent.id);
-            #absolute_url = reverse('mainapp:search/' + str(dent.id))
-            #return redirect(absolute_url);
         except:
             context = {"message":"Error 404 (not really)"}
             return render(request, 'login.html', context);
@@ -69,7 +66,7 @@ def search(request, tid):
         }
         return render(request, "search-results.html", context);
     else:
-        return render(request, 'search.html', {});
+        return render(request, 'search.html', {"name": Dentist.objects.get(id=request.session['id']).first_name});
 
 def patientlist(request, tid):
     data = Patient.objects.all();
@@ -82,7 +79,7 @@ def edittooth1(request, pid):
         image = request.POST["image"];
         
     else:
-        return render(request, "teethlist.html", {});
+        return render(request, "teethlist.html", {"name": Dentist.objects.get(id=request.session['id']).first_name});
 
 
 def edittooth2(request, pid, tid):
@@ -100,5 +97,8 @@ def edittooth2(request, pid, tid):
         return render(request, 'tooth-detail.html', {});
     else:
         obj = Tooth.objects.get(patient_id = pid, tooth_number = tid);
-        context = {"name": request.session["id"], "item": obj.image, "number": obj.tooth_number, "history": obj.history, "future": obj.scheduled};
+        if obj.image:
+            context = {"name": Dentist.objects.get(id=request.session['id']).first_name, "item": obj.image, "number": obj.tooth_number, "history": obj.history, "future": obj.scheduled};
+        else:
+            context = {"name": Dentist.objects.get(id=request.session['id']).first_name, "number": obj.tooth_number, "history": obj.history, "future": obj.scheduled};
         return render(request, "tooth-detail.html", context);

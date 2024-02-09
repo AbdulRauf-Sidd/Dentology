@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/ne.css' %}">
 </head>
 <body>
     <div class="container">
@@ -13,7 +13,7 @@
             <img id="image" src="{% static 'webImages/logo_f.png' %}" width="50px" height="50px" alt="logo">
             <a href="http://127.0.0.1:8000/home/"><h3>DENTOLOGY</h3></a>
             <div class="logout">
-                <h4>dummy text</h4>
+                <h4 class="us-name">Hi, {{ name }}</h4>
                 <a id="a1" href="http://127.0.0.1:8000/login/">LOG OUT</a>
             </div>
         </div>
@@ -21,7 +21,7 @@
         <div class="row search_row">
             <form action="" method="get">
                 <input class="search" type="text" placeholder="Search Patients..." name="search">
-                <buttons" class="search-btn" type="submit"><img src="{% static 'webImages/search1.png' %}" width="20px" height="20px" alt="search Patients"></button>
+                <buttons" class="search-btn" type="submit"><img class="se" src="{% static 'webImages/search1.png' %}" width="20px" height="20px" alt="search Patients"></button>
             </form>
             
         </div>

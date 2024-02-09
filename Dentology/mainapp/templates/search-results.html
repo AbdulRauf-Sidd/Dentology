@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/ne.css' %}">
 </head>
 <body>
     <div class="container">
@@ -17,14 +17,14 @@
                 <buttons" class="search-bar-btn " type="submit"><a href=""><img src="{% static 'webImages/search1.png' %}" width="20px" height="20px" alt="search Patients"></button>
             </form>
             <div class="logout logout-search-bar" >
-                <h3 id="lsb-head" style="position: relative; top: 8px; right: 80px ; text-decoration: none;">Dummy text</h3>
+                <h3 id="lsb-head" style="position: relative; top: 8px; right: 80px ; text-decoration: none;">Hi, {{ name }}</h3>
                 <a style="position: relative; bottom: 18px;" class=lsb-btn id="a1" href="http://127.0.0.1:8000/login/">LOG OUT</a>
             </div>
         </div>
         <!-- header end -->
-        <div class="row ">
+        <div class="row" id="search-result-row">
             <div class="table">
-                <table style="border: 2px solid black;">
+                <table class="styled-table">
                     <thead>
                         <tr >
                             <th>Name</th>
