@@ -13,7 +13,7 @@ def login(request):
             request.session['id'] = dent.id;
             return redirect('http://127.0.0.1:8000/home/');
         except:
-            context = {"message":"Error 404 (not really)"}
+            context = {"message":"Incorrect Login Credentials"}
             return render(request, 'login.html', context);
     else:
         return render(request, 'login.html', {});

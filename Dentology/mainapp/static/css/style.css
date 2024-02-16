@@ -371,7 +371,7 @@ textarea {
 /* search page */
 .search_row{
     /* background-color: rgba(156,220,233,1); */
-    background: linear-gradient(rgba(0, 8, 51, 0.647),rgba(0, 8, 51, 0.637)),url(/static/css/images/bg-search.avif);
+    /*background: linear-gradient(rgba(0, 8, 51, 0.647),rgba(0, 8, 51, 0.637)),url(/static/css/images/bg-search.avif);*/
     height: 78vh;
     background-repeat: no-repeat;
     background-position: center;
