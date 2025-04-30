@@ -41,8 +41,7 @@ Welcome to Dentology, a comprehensive web application designed for dentists to m
    ```bash
    git clone https://github.com/yourusername/dentology.git
    cd dentology
-2. **Install dependencies**:
-   ```bash
+2. **Install dependencies**
 3. **Run Server**
    ```bash
    python3 manage.py runserver
